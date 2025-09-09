@@ -84,10 +84,10 @@ python ubuntu_image_fetcher.py
 
 ## Challenge Features
 
-Multiple URLs: Enter several image URLs at once.
-Safety Precautions: Only downloads images with safe content types.
-Duplicate Prevention: Checks for duplicate images before saving.
-HTTP Header Checks: Verifies Content-Type before saving.
+- Multiple URLs: Enter several image URLs at once.
+- Safety Precautions: Only downloads images with safe content types.
+- Duplicate Prevention: Checks for duplicate images before saving.
+- HTTP Header Checks: Verifies Content-Type before saving.
 
 ---
 
