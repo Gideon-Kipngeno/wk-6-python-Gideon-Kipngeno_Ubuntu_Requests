@@ -1,5 +1,7 @@
 # Ubuntu_Requests
 
+## Ubuntu-Inspired Image Fetcher Assignment 
+
 Ubuntu Image Fetcher is a Python-based tool built in the spirit of Ubuntu—"I am because we are." This project connects to the global web community, respectfully fetches shared image resources, and organizes them for future appreciation.
 
 ---
@@ -53,34 +55,45 @@ pip install requests
 
 Clone the Repository
 ```` bash
-git clone https://github.com/your-username/Ubuntu_Requests.git
+git clone https://github.com/Gideon-Kipngeno/wk-6-python-Gideon-Kipngeno_Ubuntu_Requests.git
 cd Ubuntu_Requests
 ````
-Usage
-Run the script:
+---
+
+## Usage: 
+
+## Run the script:
 ```` bash
 python ubuntu_image_fetcher.py
 ````
-**Output**
-You will be prompted to enter one or more image URLs (separated by commas or spaces).
+---
 
-Welcome to the Ubuntu Image Fetcher
-A tool for mindfully collecting images from the web
+## Output
 
-Please enter image URLs (comma or space separated): https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg, https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg, https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg, https://images.pexels.com/photos/1181703/pexels-photo-1181703.jpeg
-✓ Successfully fetched: pexels-photo-2102416.jpeg
-✓ Image saved to Fetched_Images/pexels-photo-2102416.jpeg
+    You will be prompted to enter one or more image URLs (separated by commas or spaces).
 
-Connection strengthened. Community enriched.
+    Welcome to the Ubuntu Image Fetcher
+    A tool for mindfully collecting images from the web
 
-**Challenge Features**
-Multiple URLs: Enter several image URLs at once.
-Safety Precautions: Only downloads images with safe content types.
-Duplicate Prevention: Checks for duplicate images before saving.
-HTTP Header Checks: Verifies Content-Type before saving.
+    Please enter image URLs (comma or space separated): https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg, https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg, https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg, https://images.pexels.com/photos/1181703/pexels-photo-1181703.jpeg
+    ✓ Successfully fetched: pexels-photo-2102416.jpeg
+    ✓ Image saved to Fetched_Images/pexels-photo-2102416.jpeg
 
-**Contributing**
-Contributions are welcome! Please fork the repository and submit a pull request.
+    Connection strengthened. Community enriched.
+---
+
+## Challenge Features
+
+    Multiple URLs: Enter several image URLs at once.
+    Safety Precautions: Only downloads images with safe content types.
+    Duplicate Prevention: Checks for duplicate images before saving.
+    HTTP Header Checks: Verifies Content-Type before saving.
+
+---
+
+## Contributing
+
+    Contributions are welcome! Please fork the repository and submit a pull request.
 
 - Fork the repo
 - Create your feature branch (git checkout -b feature/AmazingFeature)
@@ -88,18 +101,27 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 - Push to the branch (git push origin feature/AmazingFeature)
 - Open a pull request
 
-**Evaluation Criteria**
+---
+
+## Evaluation Criteria 
+
 1. Proper use of the requests library for fetching content
 2. Effective error handling for network issues
 3. Appropriate file management and directory creation
 4. Clean, readable code with clear comments
 5. Faithfulness to Ubuntu principles of community and respect
 
-**Ubuntu Philosophy**
-"A person is a person through other persons."
-— Ubuntu philosophy
+---
+
+## Ubuntu Philosophy 
+
+    "A person is a person through other persons."
+    — Ubuntu philosophy
 
 Your program connects you to the work of others across the web.
 
-**License**
-This project is open source and available under the MIT License. ````
+---
+
+## License
+
+    This project is open source.
