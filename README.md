@@ -84,16 +84,16 @@ python ubuntu_image_fetcher.py
 
 ## Challenge Features
 
-    Multiple URLs: Enter several image URLs at once.
-    Safety Precautions: Only downloads images with safe content types.
-    Duplicate Prevention: Checks for duplicate images before saving.
-    HTTP Header Checks: Verifies Content-Type before saving.
+Multiple URLs: Enter several image URLs at once.
+Safety Precautions: Only downloads images with safe content types.
+Duplicate Prevention: Checks for duplicate images before saving.
+HTTP Header Checks: Verifies Content-Type before saving.
 
 ---
 
 ## Contributing
 
-    Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are welcome! Please fork the repository and submit a pull request.
 
 - Fork the repo
 - Create your feature branch (git checkout -b feature/AmazingFeature)
@@ -115,8 +115,8 @@ python ubuntu_image_fetcher.py
 
 ## Ubuntu Philosophy 
 
-    "A person is a person through other persons."
-    — Ubuntu philosophy
+"A person is a person through other persons."
+— Ubuntu philosophy
 
 Your program connects you to the work of others across the web.
 
@@ -124,4 +124,4 @@ Your program connects you to the work of others across the web.
 
 ## License
 
-    This project is open source.
+This project is open source.
