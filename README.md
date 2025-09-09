@@ -1,125 +1,105 @@
 # Ubuntu_Requests
+
 Ubuntu Image Fetcher is a Python-based tool built in the spirit of Ubuntu—"I am because we are." This project connects to the global web community, respectfully fetches shared image resources, and organizes them for future appreciation.
-Ubuntu-Inspired Image Fetcher Assignment
-The Wisdom of Ubuntu: "I am because we are"
 
-In the spirit of Ubuntu, which emphasizes community and sharing, your task is to create a program that connects to the global community of the internet, respectfully fetches shared resources, and organizes them for later appreciation.
+---
 
-Your Task
+## Table of Contents
 
-Create a Python script that:
+- [About](#about)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Example Output](#example-output)
+- [Challenge Features](#challenge-features)
+- [Contributing](#contributing)
+- [Evaluation Criteria](#evaluation-criteria)
+- [Ubuntu Philosophy](#ubuntu-philosophy)
+- [License](#license)
 
-Prompts the user for a URL containing an image
+---
 
-Creates a directory called "Fetched_Images" if it doesn't exist
+## About
 
-Downloads the image from the provided URL
+This project is inspired by the Ubuntu philosophy, which emphasizes community, sharing, and respect. The Ubuntu Image Fetcher allows users to fetch images from the internet in a mindful and organized way.
 
-Saves it to the Fetched_Images directory with an appropriate filename
+---
 
-Handles errors gracefully, respecting that not all connections succeed
+## Features
 
-Requirements
+- Prompt the user for one or more image URLs
+- Create a directory called `Fetched_Images` if it doesn't exist
+- Download images from the provided URLs
+- Save images to the `Fetched_Images` directory with appropriate filenames
+- Handle errors gracefully (network, HTTP, file issues)
+- Prevent duplicate downloads(Please enter image URLs (comma or space separated): https://images.pexels.com/photos/1181703/pexels-photo-1181703.jpeg
+✗ Duplicate: pexels-photo-1181703.jpeg already exists and is identical. Skipping download.)
+- Check HTTP headers for safe image types
 
-Use the requests library to fetch the image
+---
 
-Check for HTTP errors and handle them appropriately
+## Getting Started
 
-Create the directory if it doesn't exist using os.makedirs() with exist_ok=True
+### Prerequisites
 
-Extract the filename from the URL or generate one if not available
+- Python 3.7+
+- `requests` library
 
-Save the image in binary mode
+Install the required library:
 
-Ubuntu Principles to Implement
+````bash
+pip install requests
+````
 
-Community: Your program should connect to the wider web community
+Clone the Repository
+```` bash
+git clone https://github.com/your-username/Ubuntu_Requests.git
+cd Ubuntu_Requests
+````
+Usage
+Run the script:
+```` bash
+python ubuntu_image_fetcher.py
+````
+**Output**
+You will be prompted to enter one or more image URLs (separated by commas or spaces).
 
-Respect: Handle errors gracefully without crashing
-
-Sharing: Organize the fetched images for later sharing
-
-Practicality: Create a tool that serves a real need
-
-Save Your Work in a GitHub Repo Called "Ubuntu_Requests" and Submit the URL for this Repository to Complete the Assignment. 
-
-Example Output
-Terminal Output Text
 Welcome to the Ubuntu Image Fetcher
 A tool for mindfully collecting images from the web
 
-Please enter the image URL: https://example.com/ubuntu-wallpaper.jpg
-✓ Successfully fetched: ubuntu-wallpaper.jpg
-✓ Image saved to Fetched_Images/ubuntu-wallpaper.jpg
+Please enter image URLs (comma or space separated): https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg, https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg, https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg, https://images.pexels.com/photos/1181703/pexels-photo-1181703.jpeg
+✓ Successfully fetched: pexels-photo-2102416.jpeg
+✓ Image saved to Fetched_Images/pexels-photo-2102416.jpeg
 
 Connection strengthened. Community enriched.
-Starter Code Structure
-python
-import requests
-import os
-from urllib.parse import urlparse
 
-def main():
-    print("Welcome to the Ubuntu Image Fetcher")
-    print("A tool for mindfully collecting images from the web\n")
-    
-    # Get URL from user
-    url = input("Please enter the image URL: ")
-    
-    try:
-        # Create directory if it doesn't exist
-        os.makedirs("Fetched_Images", exist_ok=True)
-        
-        # Fetch the image
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()  # Raise exception for bad status codes
-        
-        # Extract filename from URL or generate one
-        parsed_url = urlparse(url)
-        filename = os.path.basename(parsed_url.path)
-        
-        if not filename:
-            filename = "downloaded_image.jpg"
-            
-        # Save the image
-        filepath = os.path.join("Fetched_Images", filename)
-        
-        with open(filepath, 'wb') as f:
-            f.write(response.content)
-            
-        print(f"✓ Successfully fetched: {filename}")
-        print(f"✓ Image saved to {filepath}")
-        print("\nConnection strengthened. Community enriched.")
-        
-    except requests.exceptions.RequestException as e:
-        print(f"✗ Connection error: {e}")
-    except Exception as e:
-        print(f"✗ An error occurred: {e}")
+**Challenge Features**
+Multiple URLs: Enter several image URLs at once.
+Safety Precautions: Only downloads images with safe content types.
+Duplicate Prevention: Checks for duplicate images before saving.
+HTTP Header Checks: Verifies Content-Type before saving.
 
-if __name__ == "__main__":
-    main()
-Challenge Questions
+**Contributing**
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-Modify the program to handle multiple URLs at once.
+- Fork the repo
+- Create your feature branch (git checkout -b feature/AmazingFeature)
+- Commit your changes (git commit -m 'Add some AmazingFeature')
+- Push to the branch (git push origin feature/AmazingFeature)
+- Open a pull request
 
-Implement precautions that you should  take when downloading files from unknown sources.
+**Evaluation Criteria**
+1. Proper use of the requests library for fetching content
+2. Effective error handling for network issues
+3. Appropriate file management and directory creation
+4. Clean, readable code with clear comments
+5. Faithfulness to Ubuntu principles of community and respect
 
-Implement a feature that prevents downloading duplicate images.
+**Ubuntu Philosophy**
+"A person is a person through other persons."
+— Ubuntu philosophy
 
-Implement what HTTP headers might be important to check before saving the response content.
+Your program connects you to the work of others across the web.
 
-Evaluation Criteria
-
-Proper use of the requests library for fetching content
-
-Effective error handling for network issues
-
-Appropriate file management and directory creation
-
-Clean, readable code with clear comments
-
-Faithfulness to Ubuntu principles of community and respect
-
-Remember:
-
-"A person is a person through other persons." - Ubuntu philosophy. Your program connects you to the work of others across the web.
+**License**
+This project is open source and available under the MIT License. ````
